@@ -11,11 +11,7 @@ public class App {
     public static void main(String[] args) {
         System.out.println("1 - Greet \n2 - Even \n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
         int userInput = Input.inputNumeric("Your choice: ");
-
-        String userName = "";
-        if (userInput != 0) {
-            userName = Cli.greeting();
-        }
+        String userName = userInput != 0 ? Cli.greeting() : "";
 
         switch (userInput) {
             case 1:
