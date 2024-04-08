@@ -5,11 +5,11 @@ import hexlet.code.utilities.Input;
 import hexlet.code.games.Even;
 import hexlet.code.games.Calculator;
 import hexlet.code.games.GCD;
-
+import hexlet.code.games.Prime;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("1 - Greet \n2 - Even \n3 - Calc\n4 - GCD\n5 - Progression\n0 - Exit");
+        System.out.println("1 - Greet \n2 - Even \n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
         int userInput = Input.inputNumeric("Your choice: ");
 
         String userName = "";
@@ -32,6 +32,9 @@ public class App {
                 break;
             case 5:
                 Progression.start(userName);
+                break;
+            case 6:
+                Prime.start(userName);
                 break;
             case 0:
                 Engine.exit();
