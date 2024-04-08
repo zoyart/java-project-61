@@ -5,7 +5,7 @@ import hexlet.code.utilities.Input;
 
 public class Progression {
     public static void start(String userName) {
-        System.out.println("\nWhat is the result of the expression?");
+        System.out.println("\nWhat number is missing in the progression?");
         int correctAnswersCount = 0;
         int userAnswer;
 
