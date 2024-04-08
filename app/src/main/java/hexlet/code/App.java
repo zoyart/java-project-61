@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import hexlet.code.games.Progression;
 import hexlet.code.utilities.Input;
 import hexlet.code.games.Even;
 import hexlet.code.games.Calculator;
@@ -8,7 +9,7 @@ import hexlet.code.games.GCD;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("1 - Greet \n2 - Even \n3 - Calc\n4 - GCD\n0 - Exit");
+        System.out.println("1 - Greet \n2 - Even \n3 - Calc\n4 - GCD\n5 - Progression\n0 - Exit");
         int userInput = Input.inputNumeric("Your choice: ");
 
         String userName = "";
@@ -28,6 +29,9 @@ public class App {
                 break;
             case 4:
                 GCD.start(userName);
+                break;
+            case 5:
+                Progression.start(userName);
                 break;
             case 0:
                 Engine.exit();
