@@ -5,14 +5,13 @@ import hexlet.code.games.EvenGame;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("1 - Greet \n2 - Even \n0 - Exit");
+        System.out.println(
+                "1 - Greet \n"
+                + "2 - Even \n"
+                + "0 - Exit"
+        );
         String userInput = Input.inputString("Your choice: ");
 
-        /*
-        1 - greeting
-        2 - even game
-        0 - exit
-         */
         switch (userInput) {
             case "1":
                 Cli.greeting();

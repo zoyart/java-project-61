@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import hexlet.code.utilities.Input;
-import hexlet.code.utilities.Validator;
 
 public class EvenGame {
     public static void start(String userName) {
@@ -13,19 +12,9 @@ public class EvenGame {
         while (correctAnswersCount != 3) {
             int randomValue = generateRandomNumericValue(1, 100);
             String answer = randomValue % 2 == 0 ? "yes" : "no";
-            System.out.println("Question: " + randomValue);
 
-            // Валидация на допустимые ответы от пользователя
-            boolean isValidated = false;
-            while (!isValidated) {
-                try {
-                    userInput = Input.inputString("Your answer: ");
-                    Validator.searchValueInValues(userInput, new String[]{"yes", "no"});
-                    isValidated = true;
-                } catch (Exception e) {
-                    System.out.println("Введен не корректный ответ. Пожалуйста, попробуйте ещё раз.");
-                }
-            }
+            System.out.println("Question: " + randomValue);
+            userInput = Input.inputString("Your answer: ");
 
             // Проверка ответа полозователя
             if (userInput.equalsIgnoreCase(answer)) {
