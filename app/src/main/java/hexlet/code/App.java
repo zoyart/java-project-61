@@ -15,7 +15,6 @@ public class App {
 
         switch (userInput) {
             case 1:
-                Cli.greeting();
                 break;
             case 2:
                 Even.start(userName);
