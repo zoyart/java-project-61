@@ -7,13 +7,17 @@ public class Calculator {
     public static void start(String userName) {
         System.out.println("\nWhat is the result of the expression?");
 
+        final int requiredNumberAnswers = 3;
         int correctAnswersCount = 0;
-        int requiredNumberAnswers = 3;
         int userAnswer;
 
         while (correctAnswersCount != requiredNumberAnswers) {
-            int firstValue = Engine.generateRandomNumericValue(1, 100);
-            int secondValue = Engine.generateRandomNumericValue(1, 100);
+            final int maxFirstValue = 100;
+            int firstValue = Engine.generateRandomNumericValue(1, maxFirstValue);
+
+            final int maxSecondValue = 100;
+            int secondValue = Engine.generateRandomNumericValue(1, maxSecondValue);
+
             String randomSign = Engine.generateRandomSign();
 
             System.out.println("Question: " + firstValue + " " + randomSign + " " + secondValue);

@@ -9,7 +9,7 @@ public class Prime {
     public static void start(String userName) {
         System.out.println("\nAnswer 'yes' if given number is prime. Otherwise answer 'no'.");
         int correctAnswersCount = 0;
-        int requiredNumberAnswers = 3;
+        final int requiredNumberAnswers = 3;
         String userAnswer;
 
         while (correctAnswersCount != requiredNumberAnswers) {

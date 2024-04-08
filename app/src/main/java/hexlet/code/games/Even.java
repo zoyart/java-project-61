@@ -8,11 +8,11 @@ public class Even {
         System.out.println("\nAnswer 'yes' if the number is even, otherwise answer 'no'.");
 
         int correctAnswersCount = 0;
-        int requiredNumberAnswers = 3;
+        final int requiredNumberAnswers = 3;
         String userAnswer;
 
         while (correctAnswersCount != requiredNumberAnswers) {
-            int maxRandomValue = 100;
+            final int maxRandomValue = 100;
             int randomValue = Engine.generateRandomNumericValue(1, maxRandomValue);
 
             System.out.println("Question: " + randomValue);
