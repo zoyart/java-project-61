@@ -8,22 +8,18 @@ public class Even {
         System.out.println("\nAnswer 'yes' if the number is even, otherwise answer 'no'.");
 
         int correctAnswersCount = 0;
-        String userInput;
+        String userAnswer;
 
         while (correctAnswersCount != 3) {
             int randomValue = Engine.generateRandomNumericValue(1, 100);
-            String answer = randomValue % 2 == 0 ? "yes" : "no";
 
             System.out.println("Question: " + randomValue);
-            userInput = Input.inputString("Your answer: ");
+            userAnswer = Input.inputString("Your answer: ");
 
             // Проверка ответа пользователя
-            if (userInput.equalsIgnoreCase(answer)) {
-                System.out.println("Correct!");
+            String answer = randomValue % 2 == 0 ? "yes" : "no";
+            if (Engine.checkAnswer(userName, userAnswer, answer)) {
                 correctAnswersCount++;
-            } else {
-                Engine.printWrongAnswerMessage(userName, userInput, answer);
-                Engine.exit();
             }
         }
         Engine.printCongratulations(userName);

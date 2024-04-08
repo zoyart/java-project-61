@@ -40,4 +40,26 @@ public class Engine {
 
         return a;
     }
+
+    public static boolean checkAnswer(String userName, int userAnswer, int answer) {
+        if (userAnswer == answer) {
+            System.out.println("Correct!");
+            return true;
+        } else {
+            Engine.printWrongAnswerMessage(userName, userAnswer, answer);
+            Engine.exit();
+            return false;
+        }
+    }
+
+    public static boolean checkAnswer(String userName, String userAnswer, String answer) {
+        if (userAnswer.equalsIgnoreCase(answer)) {
+            System.out.println("Correct!");
+            return true;
+        } else {
+            Engine.printWrongAnswerMessage(userName, userAnswer, answer);
+            Engine.exit();
+            return false;
+        }
+    }
 }

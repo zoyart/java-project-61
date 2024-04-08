@@ -6,14 +6,12 @@ import hexlet.code.utilities.Input;
 public class Progression {
     public static void start(String userName) {
         System.out.println("\nWhat is the result of the expression?");
-
         int correctAnswersCount = 0;
-        int userInput;
+        int userAnswer;
 
         while (correctAnswersCount != 3) {
             int length = Engine.generateRandomNumericValue(5, 10);
             int missingPlace = Engine.generateRandomNumericValue(4, length - 1);
-
             int startProgression = Engine.generateRandomNumericValue(1, 20);
             int step = Engine.generateRandomNumericValue(1, 20);
             int[] progression = generateProgression(length, step, startProgression);
@@ -24,23 +22,16 @@ public class Progression {
                 if (i == missingPlace) {
                     System.out.print(".. ");
                 } else {
-                    System.out.print(progression[i]);
-                    System.out.print(" ");
+                    System.out.print(progression[i] + " ");
                 }
             }
 
-            System.out.println(" ");
-            userInput = Input.inputNumeric("Your answer: ");
+            userAnswer = Input.inputNumeric("\nYour answer: ");
 
             // Проверка ответа пользователя
             int answer = progression[missingPlace];
-
-            if (userInput == answer) {
-                System.out.println("Correct!");
+            if (Engine.checkAnswer(userName, userAnswer, answer)) {
                 correctAnswersCount++;
-            } else {
-                Engine.printWrongAnswerMessage(userName, userInput, answer);
-                Engine.exit();
             }
         }
         Engine.printCongratulations(userName);

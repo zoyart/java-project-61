@@ -8,24 +8,19 @@ public class GCD {
         System.out.println("\nFind the greatest common divisor of given numbers.");
 
         int correctAnswersCount = 0;
-        int userInput;
+        int userAnswer;
 
         while (correctAnswersCount != 3) {
             int firstValue = Engine.generateRandomNumericValue(1, 100);
             int secondValue = Engine.generateRandomNumericValue(1, 100);
 
-            int answer = Engine.calcGCD(firstValue, secondValue);
-
             System.out.println("Question: " + firstValue + " " + secondValue);
-            userInput = Input.inputNumeric("Your answer: ");
+            userAnswer = Input.inputNumeric("Your answer: ");
 
             // Проверка ответа пользователя
-            if (userInput == answer) {
-                System.out.println("Correct!");
+            int answer = Engine.calcGCD(firstValue, secondValue);
+            if (Engine.checkAnswer(userName, userAnswer, answer)) {
                 correctAnswersCount++;
-            } else {
-                Engine.printWrongAnswerMessage(userName, userInput, answer);
-                Engine.exit();
             }
         }
         Engine.printCongratulations(userName);
