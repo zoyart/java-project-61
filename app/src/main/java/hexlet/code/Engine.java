@@ -29,4 +29,15 @@ public class Engine {
     public static void printCongratulations(String userName) {
         System.out.println("\nCongratulations, " + userName + "!");
     }
+
+
+    public static int calcGCD(int a, int b) {
+        while (b != 0) {
+            int tmp = a % b;
+            a = b;
+            b = tmp;
+        }
+
+        return a;
+    }
 }
