@@ -27,16 +27,17 @@ public class EvenGame {
                 }
             }
 
+            // Проверка ответа полозователя
             if (userInput.equalsIgnoreCase(answer)) {
                 System.out.println("Correct!");
                 correctAnswersCount++;
             } else {
                 System.out.println("'" + userInput + "' is wrong answer ;(. Correct answer was '" + answer + "'.");
                 System.out.println("Let's try again, " + userName + "!");
+                System.exit(0);
             }
         }
-
-        System.out.println("Congratulations, " + userName + "!");
+        System.out.println("\nCongratulations, " + userName + "!");
     }
 
     public static int generateRandomNumericValue(int minValue, int maxValue) {
