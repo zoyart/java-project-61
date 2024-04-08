@@ -17,7 +17,7 @@ public class Progression {
             int[] progression = generateProgression(length, step, startProgression);
 
             // Отображение последовательности
-            System.out.println("Question: ");
+            System.out.print("Question: ");
             for (int i = 0; i < progression.length; i++) {
                 if (i == missingPlace) {
                     System.out.print(".. ");
