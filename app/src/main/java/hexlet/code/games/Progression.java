@@ -22,8 +22,8 @@ public class Progression {
             final int maxStartProgression = 20;
             int startProgression = Engine.generateRandomNumericValue(minStartProgression, maxStartProgression);
 
-            int minStep = 1;
-            int maxStep = 20;
+            final int minStep = 1;
+            final int maxStep = 20;
             int step = Engine.generateRandomNumericValue(minStep, maxStep);
             int[] progression = generateProgression(length, step, startProgression);
 

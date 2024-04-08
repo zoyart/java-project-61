@@ -13,7 +13,8 @@ public class Prime {
         String userAnswer;
 
         while (correctAnswersCount != requiredNumberAnswers) {
-            int randomNumber = Engine.generateRandomNumericValue(2, 101);
+            final int maxPrimeNumber = 101;
+            int randomNumber = Engine.generateRandomNumericValue(2, maxPrimeNumber);
             BigInteger bigInteger = BigInteger.valueOf(randomNumber);
 
             System.out.println("Question: " + randomNumber);
