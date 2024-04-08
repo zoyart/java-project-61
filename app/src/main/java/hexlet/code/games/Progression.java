@@ -7,13 +7,24 @@ public class Progression {
     public static void start(String userName) {
         System.out.println("\nWhat number is missing in the progression?");
         int correctAnswersCount = 0;
+        int requiredNumberAnswers = 3;
         int userAnswer;
 
-        while (correctAnswersCount != 3) {
-            int length = Engine.generateRandomNumericValue(5, 10);
-            int missingPlace = Engine.generateRandomNumericValue(4, length - 1);
-            int startProgression = Engine.generateRandomNumericValue(1, 20);
-            int step = Engine.generateRandomNumericValue(1, 20);
+        while (correctAnswersCount != requiredNumberAnswers) {
+            int minLenProgression = 5;
+            int maxLenProgression = 10;
+            int length = Engine.generateRandomNumericValue(minLenProgression, maxLenProgression);
+
+            int minMissPlace = 4;
+            int missingPlace = Engine.generateRandomNumericValue(minMissPlace, length - 1);
+
+            int minStartProgression = 1;
+            int maxStartProgression = 20;
+            int startProgression = Engine.generateRandomNumericValue(minStartProgression, maxStartProgression);
+
+            int minStep = 1;
+            int maxStep = 20;
+            int step = Engine.generateRandomNumericValue(minStep, maxStep);
             int[] progression = generateProgression(length, step, startProgression);
 
             // Отображение последовательности

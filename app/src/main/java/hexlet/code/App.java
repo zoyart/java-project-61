@@ -12,26 +12,27 @@ public class App {
         System.out.println("1 - Greet \n2 - Even \n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
         int userInput = Input.inputNumeric("Your choice: ");
         String userName = userInput != 0 ? Cli.greeting() : "";
+        String[] choices = {"Greet", "Even", "Calc", "GCD", "Progression", "Prime", "Exit"};
 
-        switch (userInput) {
-            case 1:
+        switch (choices[userInput - 1]) {
+            case "Greet":
                 break;
-            case 2:
+            case "Even":
                 Even.start(userName);
                 break;
-            case 3:
+            case "Calc":
                 Calculator.start(userName);
                 break;
-            case 4:
+            case "GCD":
                 GCD.start(userName);
                 break;
-            case 5:
+            case "Progression":
                 Progression.start(userName);
                 break;
-            case 6:
+            case "Prime":
                 Prime.start(userName);
                 break;
-            case 0:
+            case "Exit":
                 Engine.exit();
             default:
                 Engine.exit();

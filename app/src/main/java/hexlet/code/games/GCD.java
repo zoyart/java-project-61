@@ -8,11 +8,15 @@ public class GCD {
         System.out.println("\nFind the greatest common divisor of given numbers.");
 
         int correctAnswersCount = 0;
+        int requiredNumberAnswers = 3;
         int userAnswer;
 
-        while (correctAnswersCount != 3) {
-            int firstValue = Engine.generateRandomNumericValue(1, 100);
-            int secondValue = Engine.generateRandomNumericValue(1, 100);
+        while (correctAnswersCount != requiredNumberAnswers) {
+            int maxFirstValue = 100;
+            int firstValue = Engine.generateRandomNumericValue(1, maxFirstValue);
+
+            int maxSecondValue = 100;
+            int secondValue = Engine.generateRandomNumericValue(1, maxSecondValue);
 
             System.out.println("Question: " + firstValue + " " + secondValue);
             userAnswer = Input.inputNumeric("Your answer: ");

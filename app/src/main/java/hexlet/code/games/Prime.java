@@ -9,9 +9,10 @@ public class Prime {
     public static void start(String userName) {
         System.out.println("\nAnswer 'yes' if given number is prime. Otherwise answer 'no'.");
         int correctAnswersCount = 0;
+        int requiredNumberAnswers = 3;
         String userAnswer;
 
-        while (correctAnswersCount != 3) {
+        while (correctAnswersCount != requiredNumberAnswers) {
             int randomNumber = Engine.generateRandomNumericValue(2, 101);
             BigInteger bigInteger = BigInteger.valueOf(randomNumber);
 

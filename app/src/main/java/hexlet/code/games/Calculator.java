@@ -8,9 +8,10 @@ public class Calculator {
         System.out.println("\nWhat is the result of the expression?");
 
         int correctAnswersCount = 0;
+        int requiredNumberAnswers = 3;
         int userAnswer;
 
-        while (correctAnswersCount != 3) {
+        while (correctAnswersCount != requiredNumberAnswers) {
             int firstValue = Engine.generateRandomNumericValue(1, 100);
             int secondValue = Engine.generateRandomNumericValue(1, 100);
             String randomSign = Engine.generateRandomSign();
